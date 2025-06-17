@@ -1,0 +1,43 @@
+import requests
+import matplotlib.pyplot as plt
+
+
+API_KEY = "abcc4472ae801990e29ae0d400ac393f"
+
+# List of cities for which weather data will be fetched
+cities = ['Chennai', 'Mumbai', 'Delhi', 'Bangalore', 'Kolkata']
+
+# Lists to store temperature and humidity values for each city
+temps = []
+humidities = []
+
+# Loop through each of the  city and fetch weather data
+for city in cities:
+    
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+    response = requests.get(url)
+    data = response.json()
+    main = data['main']
+    temp = main['temp']
+    humidity = main['humidity']
+    temps.append(temp)
+    humidities.append(humidity)
+
+    # Print the weather data for each city
+    print(f"{city} → Temp: {temp}°C | Humidity: {humidity}%")
+
+#Bar chart for temperature
+plt.figure(figsize=(10, 5))
+plt.bar(cities, temps, color='skyblue')
+plt.title('Temperature in Cities')
+plt.ylabel('Temperature (°C)')
+plt.xlabel('City')
+plt.show()
+
+#Bar chart for humidity
+plt.figure(figsize=(10, 5))
+plt.bar(cities, humidities, color='lightgreen')
+plt.title('Humidity in Cities')
+plt.ylabel('Humidity (%)')
+plt.xlabel('City')
+plt.show()
