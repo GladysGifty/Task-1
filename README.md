@@ -46,3 +46,9 @@ This kind of project is ideal for teaching programming, data handling, and basic
 4. Corporate Reporting Tools
 Businesses that depend on weather data (e.g., airlines, logistics, construction) can integrate similar scripts into internal tools to make operational decisions based on weather conditions.
 
+*OUTPUT* : ![Image](https://github.com/user-attachments/assets/d3f6df11-babe-4c13-8f56-c3c249cdbe5d)
+
+![Image](https://github.com/user-attachments/assets/1c98b7e1-56a7-4cf3-b32c-61beee9b0c16)
+
+![Image](https://github.com/user-attachments/assets/cdd26565-93cc-458c-9147-c199f6223600)
+
